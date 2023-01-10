@@ -7,17 +7,27 @@
     <title>űrlap</title>
 
     <script>
+        function check() {
+            let felhasznalonev = document.getElementById('name').value
+            let jelszo = document.getElementById('pass').value
+            var box = document.getElementById('TT').checked
+            
+
+            if (felhasznalonev == "admin" && jelszo == "admin1234" && box) {
+                document.write('<br>' + "Üdv. Admin!");
+            }
+        }
     </script>
 </head>
 
 <body>
     <form>
         <label for="nev">Felhasználónév: </label> <br>
-        <input type="text" id="name" name="name" value=" "> <br><br>
+        <input type="text" id="name" name="name" value=""> <br><br>
     </form>
     <form>
         <label for="jelszo">Jelszó: </label> <br>
-        <input type="text" id="pass" name="pass" value=" "> <br><br>
+        <input type="text" id="pass" name="pass" value=""> <br><br>
     </form>
     <form>
           <input type="checkbox" id="TT" name="true" value="">
